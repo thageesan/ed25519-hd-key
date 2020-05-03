@@ -75,7 +75,6 @@ export const derivePath = (path: Path, seed: Hex): Keys => {
     const { key, chainCode } = getMasterKeyFromSeed(seed);
     const segments = path
         .split('/')
-        .slice(1)
         .map(replaceDerive)
         .map(el => parseInt(el, 10));
 
